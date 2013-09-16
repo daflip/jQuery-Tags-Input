@@ -298,13 +298,14 @@
 					  	$(event.data.fake_input).resetAutosize(settings);
 						return false;
 					} else if (event.data.autosize) {
-			            $(event.data.fake_input).doAutosize(settings);
-          			}
-          c = String.fromCharCode(event.keyCode);
+            $(event.data.fake_input).doAutosize(settings);
+          }
+          var c = String.fromCharCode(event.keyCode);
           if (!c.match(/[\w\s0-9]/)) {
-					  event.preventDefault();
+            event.preventDefault();
             return false;
           }
+
 				});
 				//Delete last tag on backspace
 				data.removeWithBackspace && $(data.fake_input).bind('keydown', function(event)
