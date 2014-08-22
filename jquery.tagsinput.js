@@ -300,7 +300,7 @@
 					} else if (event.data.autosize) {
             $(event.data.fake_input).doAutosize(settings);
           }
-          var c = String.fromCharCode(event.keyCode);
+          var c = String.fromCharCode(event.which);
           if (!c.match(/[\w\s0-9]/)) {
             event.preventDefault();
             return false;
